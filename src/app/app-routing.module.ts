@@ -7,10 +7,12 @@ import { MessagesComponent } from './messages/messages.component';
 import { UploadsComponent } from './uploads/uploads.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { FourOFourComponent } from './four-o-four/four-o-four.component';
+
+
 const routes: Routes = [
 {path:'',component:HomepageComponent},
 {path:'/cars',component:CarsComponent},
@@ -22,6 +24,7 @@ const routes: Routes = [
 {path:'/user/login',component:LoginComponent},
 {path:'/user/register',component:SignupComponent},
 {path:'/user/reset_password',component:ResetpasswordComponent},
+{path:'{**}',component:FourOFourComponent},
 ];
 
 @NgModule({
@@ -29,3 +32,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const navarray = [HomepageComponent,CarsComponent,DetailsComponent,MessagesComponent,UploadsComponent,ProfileComponent,ContactsComponent,LoginComponent,SignupComponent,ResetpasswordComponent,FourOFourComponent]

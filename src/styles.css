@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+nav{
+    background-color: rgb(31, 30, 30);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+}

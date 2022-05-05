@@ -15,16 +15,16 @@ import { FourOFourComponent } from './four-o-four/four-o-four.component';
 
 const routes: Routes = [
 {path:'',component:HomepageComponent},
-{path:'/cars',component:CarsComponent},
-{path:'/car/details',component:DetailsComponent},
-{path:'/user/messages',component:MessagesComponent},
-{path:'/user/uploads',component:UploadsComponent},
-{path:'/user/profile',component:ProfileComponent},
-{path:'/user/contact',component:ContactsComponent},
-{path:'/user/login',component:LoginComponent},
-{path:'/user/register',component:SignupComponent},
-{path:'/user/reset_password',component:ResetpasswordComponent},
-{path:'{**}',component:FourOFourComponent},
+{path:'cars',component:CarsComponent},
+{path:'car/details',component:DetailsComponent},
+{path:'user/messages',component:MessagesComponent},
+{path:'user/uploads',component:UploadsComponent},
+{path:'user/profile',component:ProfileComponent},
+{path:'user/contact',component:ContactsComponent},
+{path:'user/login',component:LoginComponent},
+{path:'user/register',component:SignupComponent},
+{path:'user/reset_password',component:ResetpasswordComponent},
+{path:'**',component:FourOFourComponent},
 ];
 
 @NgModule({

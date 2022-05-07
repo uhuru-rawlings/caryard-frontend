@@ -5,3 +5,39 @@ nav{
     padding-bottom: 10px;
     text-align: right;
 }
+nav .nav-links a{
+    margin-left: 15px;
+}
+nav .nav-links a button{
+    position: relative;
+}
+nav .nav-links a button::after{
+    content: "";
+    border-bottom: 2px solid orangered;
+    border-right: 2px solid orangered;
+    width:30%;
+    height:30%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    opacity: 0;
+    transition:0.75s;
+}
+nav .nav-links a button::before{
+    content: "";
+    border-top: 2px solid orangered;
+    border-left: 2px solid orangered;
+    position:absolute;
+    width:30%;
+    height:30%;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition:0.75s;
+}
+nav .nav-links a button:hover::before{
+    opacity:1;
+}
+nav .nav-links a button:hover::after{
+    opacity:1;
+}

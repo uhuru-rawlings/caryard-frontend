@@ -8,7 +8,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class NavbarComponent implements OnInit {
   login:any = ''
-  button:any = ''
+  button:any = 'f'
   constructor(private cookie:CookieService) { }
 
   ngOnInit(): void {

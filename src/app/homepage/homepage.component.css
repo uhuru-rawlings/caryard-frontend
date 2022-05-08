@@ -94,3 +94,8 @@
 .testimonials .row .card:hover{
     box-shadow: 4px 4px 6px rgb(146, 42, 5);
 }
+.flex_cards .col-4 .images{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}

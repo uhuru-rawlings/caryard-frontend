@@ -81,3 +81,15 @@ nav .nav-links a button:hover::after{
     left: 0;
     top: 0;
  } */
+ #submitbtn{
+     background-color: rgb(146, 42, 5);
+     color: #C5C5C5;
+     /* border: none; */
+     transition: 1.2s;
+     border: 2px solid rgb(146, 42, 5);
+ }
+ #submitbtn:hover{
+    background-color: inherit;
+    color: rgb(146, 42, 5);
+    border: 2px solid rgb(146, 42, 5);
+ }

@@ -28,7 +28,7 @@
 .welcometext button{
     background-color: rgb(146, 42, 5);
     color: #C5C5C5;
-    border: none;
+    border: 2px solid rgb(146, 42, 5);
     font-size: 1.5em;
     transition: 1.2s;
 }
@@ -92,7 +92,7 @@
     border:none;
 }
 .testimonials .row .card:hover{
-    box-shadow: 4px 4px 6px rgb(146, 42, 5);
+    box-shadow: 4px 4px 6px rgba(31, 30, 30,0.2);
 }
 .flex_cards .col-4 .images{
     width: 100px;

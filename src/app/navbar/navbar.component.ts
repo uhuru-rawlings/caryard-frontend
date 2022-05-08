@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  login:any = 'hide'
+  login:any = 'block'
+  button:any = 'Login'
   constructor() { }
 
   ngOnInit(): void {
   }
 
   toogleForm(){
-    
+    this.login = 'none'
   }
 }

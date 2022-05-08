@@ -38,3 +38,44 @@
     border: 2px solid rgb(146, 42, 5);
 
 }
+.flex_cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.section1,.section2,.section3{
+    border: none;
+}
+.howitworks h3{
+    color: rgb(146, 42, 5);
+}
+.testimonials h3{
+    color: rgb(146, 42, 5);
+}
+.col-3 .names{
+    font-weight: 400;
+    font-style: italic;
+    text-align:center;
+    color: rgb(146, 42, 5);
+}
+.col-3 .names::after{
+    content:"~";
+}
+.col-3 .names::before{
+    content:"~";
+}
+.testimonials .col-3 .imag{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+}
+.testimonials .col-3 .imag img{
+    border-radius: 50%;
+}
+.testimonials{
+    margin-bottom: 40px;
+}
+.testimonials .row{
+    margin-top: 30px;
+}

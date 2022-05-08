@@ -1,0 +1,40 @@
+.bodysection{
+    background-image:url(../../assets/images/background.jpg);
+    background-size: 100%, 100%;
+    height: 91vh;
+    width: 100%;
+    position: relative;
+}
+#welcometext{
+   position: absolute;
+   top: 0;
+   bottom:0;
+   left:0;
+   right:0;
+   padding-top:10%;
+   background-image: linear-gradient(to right,rgba(31, 30, 30,0.5),rgba(31, 30, 30,0.2));
+}
+.welcometext{
+    /* width: 50%; */
+    color:#C5C5C5;
+}
+.welcometext h1{
+    font-weight: bold;
+    font-size: 3.0em;
+}
+.welcometext p{
+    font-size: 1.5em;
+}
+.welcometext button{
+    background-color: rgb(146, 42, 5);
+    color: #C5C5C5;
+    border: none;
+    font-size: 1.5em;
+    transition: 1.2s;
+}
+.welcometext button:hover{
+    background-color: inherit;
+    color: rgb(146, 42, 5);
+    border: 2px solid rgb(146, 42, 5);
+
+}

@@ -1,20 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    position:relative;
+}
 nav{
     background-color: rgb(31, 30, 30);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: right;
+    position:sticky;
+    top:0;
 }
 nav .nav-links a{
     margin-left: 15px;
 }
 nav .nav-links a button{
     position: relative;
+    color: #C5C5C5;
 }
 nav .nav-links a button::after{
     content: "";
-    border-bottom: 2px solid orangered;
-    border-right: 2px solid orangered;
+    border-bottom: 2px solid rgb(146, 42, 5);
+    border-right: 2px solid rgb(146, 42, 5);
     width:30%;
     height:30%;
     position:absolute;
@@ -25,8 +31,8 @@ nav .nav-links a button::after{
 }
 nav .nav-links a button::before{
     content: "";
-    border-top: 2px solid orangered;
-    border-left: 2px solid orangered;
+    border-top: 2px solid rgb(146, 42, 5);
+    border-left: 2px solid rgb(146, 42, 5);
     position:absolute;
     width:30%;
     height:30%;
@@ -41,3 +47,37 @@ nav .nav-links a button:hover::before{
 nav .nav-links a button:hover::after{
     opacity:1;
 }
+*{
+    font-family: sans-serif;
+}
+#title{
+    position:relative;
+}
+.howitworks{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* #title .titles{
+    padding: 10px;
+    position: absolute;
+}
+#title .titles::after{
+   content: "";
+   width: 15px;
+   height: 15px;
+   border-right: 3px solid rgb(146, 42, 5);
+   border-bottom: 3px solid rgb(146, 42, 5);
+   position: absolute;
+   right: 0;
+   bottom: 0;
+}
+#title .titles::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid rgb(146, 42, 5);
+    border-left: 3px solid rgb(146, 42, 5);
+    position: absolute;
+    left: 0;
+    top: 0;
+ } */

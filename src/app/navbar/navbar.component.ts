@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  login:any = 'block'
+  login:any = ''
   button:any = 'Login'
   constructor() { }
 
@@ -14,6 +14,10 @@ export class NavbarComponent implements OnInit {
   }
 
   toogleForm(){
-    this.login = 'none'
+     if(this.login == ''){
+      this.login = 'none'
+     }else{
+      this.login = ''
+     }
   }
 }

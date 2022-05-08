@@ -7,7 +7,7 @@
         <a><button class="btn shadow-none text-light" (click)="toogleForm()">Login</button></a>
         <!-- <button class="btn shadow-none text-light">Login</button> -->
     </div>
-    <section class="loginsection"[style.display]={login}>
+    <section class="loginsection" *ngIf="login">
         <form action="" autocomplete="off" method="post">
             <div class="form-group">
                 <!-- <label id="label" for="useremail">email adress</label> -->

@@ -57,6 +57,7 @@
     font-style: italic;
     text-align:center;
     color: rgb(146, 42, 5);
+    margin-bottom: 15px;
 }
 .col-3 .names::after{
     content:"~";
@@ -68,6 +69,7 @@
     width: 100px;
     height: 100px;
     margin: auto;
+    margin-bottom: 20px;
     border-radius: 50%;
 }
 .testimonials .col-3 .imag img{
@@ -78,4 +80,17 @@
 }
 .testimonials .row{
     margin-top: 30px;
+    display:flex !important;
+    flex-wrap: wrap !important;
+    justify-content:space-between !important;
+    transition: 1.0s;
+    
+}
+.testimonials .row .card{
+    width: 250px !important;
+    padding: 20px 10px 25px 10px;
+    border:none;
+}
+.testimonials .row .card:hover{
+    box-shadow: 4px 4px 6px rgb(146, 42, 5);
 }

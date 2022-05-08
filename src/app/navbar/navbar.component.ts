@@ -8,10 +8,11 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class NavbarComponent implements OnInit {
   login:any = ''
-  button:any = 'Login'
-  constructor() { }
+  button:any = ''
+  constructor(private cookie:CookieService) { }
 
   ngOnInit(): void {
+    this.toogleLogin()
   }
 
   toogleForm(){
@@ -20,5 +21,9 @@ export class NavbarComponent implements OnInit {
      }else{
       this.login = ''
      }
+  }
+  toogleLogin(){
+    let user = this.cookie.get("userd")
+    {user ? this.button = "Logout": this.button = ''}
   }
 }

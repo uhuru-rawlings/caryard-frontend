@@ -1,11 +1,24 @@
 nav a button{
     font-size: 20px;
 }
-/* .navs{
+nav{
     position:relative;
-} */
+}
+.form-group{
+    margin-top: 10px;
+}
 .loginsection{
     width: 300px;
-    position: absolute;
     padding: 20px;
+    position: absolute;
+    z-index:5;
+    background-color: #C5C5C5;
+    right: 0;
+}
+.full{
+    width: 100%;
+}
+#links{
+    display: flex;
+    justify-content: space-between;
 }

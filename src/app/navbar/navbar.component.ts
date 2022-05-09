@@ -28,11 +28,8 @@ export class NavbarComponent implements OnInit {
      }
   }
   logoutuser(){
-    let user = this.cookie.get("jwt")
-    if(user && this.login != ''){
       this.cookie.delete("jwt")
-      this.login = 'none'
-    }
+      window.location.reload()
   }
   toogleLogin(){
     let user = this.cookie.get("jwt")
@@ -54,6 +51,7 @@ export class NavbarComponent implements OnInit {
           this.error = data
         }else{
           this.cookie.set("jwt",JSON.stringify(data.jwt))
+          window.location.reload()
         }
         console.log(data)
       })

@@ -93,3 +93,14 @@ nav .nav-links a button:hover::after{
     color: rgb(146, 42, 5);
     border: 2px solid rgb(146, 42, 5);
  }
+ .signupform{
+     background-image: url(assets/images/signup.jpg);
+     background-size: 100% 100%;
+     width: 100vw;
+     height: 100vh;
+ }
+ .signups{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(31, 30, 30,.7);
+ }

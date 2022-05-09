@@ -10,7 +10,7 @@ import { LoginService } from '../services/login.service';
 })
 export class NavbarComponent implements OnInit {
   login:any = ''
-  button:any = 'f'
+  button:any = ''
   error:any = ''
   useremail:any = ''
   password:any = ''
@@ -27,8 +27,15 @@ export class NavbarComponent implements OnInit {
       this.login = ''
      }
   }
+  logoutuser(){
+    let user = this.cookie.get("jwt")
+    if(user && this.login != ''){
+      this.cookie.delete("jwt")
+      this.login = 'none'
+    }
+  }
   toogleLogin(){
-    let user = this.cookie.get("userd")
+    let user = this.cookie.get("jwt")
     {user ? this.button = "Logout": this.button = ''}
   }
 

@@ -48,6 +48,7 @@ export class NavbarComponent implements OnInit {
         }else{
           this.cookie.set("jwt",JSON.stringify(data.jwt))
         }
+        console.log(data)
       })
     }
   }

@@ -24,6 +24,10 @@ export class SignupComponent implements OnInit {
         "useremail":this.useremail,
         "password":this.password,
       }
+
+      this.RegisterService.register(details).subscribe((data) => {
+        console.log(data)
+      })
     }
   }
 }

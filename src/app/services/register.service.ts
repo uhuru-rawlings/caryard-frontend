@@ -7,9 +7,9 @@ import {HttpClient} from '@angular/common/http'
 })
 export class RegisterService {
   url:string = "http://127.0.0.1:8000/api/register/"
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  register():Observable{
-
+  register(details:any):Observable<any>{
+      return this.http.post(this.url, details)
   }
 }

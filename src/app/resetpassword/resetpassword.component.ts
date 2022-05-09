@@ -25,7 +25,7 @@ export class ResetpasswordComponent implements OnInit {
       }
 
       this.ResetService.resetpassword(details).subscribe((data) => {
-        if(data = "user dont exist."){
+        if(data === "user dont exist."){
           this.error = data
         }else{
           this.success = data

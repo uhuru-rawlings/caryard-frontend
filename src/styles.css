@@ -104,13 +104,25 @@ nav .nav-links a button:hover::after{
     height: 100%;
     background-color: rgba(31, 30, 30,.8);
  }
- .signups form{
-     width: 30%;
+ .forms form{
+     width: 50%;
      margin: auto;
  }
- .signups form .form-group{
+ .forms form .form-group{
      margin-bottom: 10px;
  }
  form .form-control{
      height: 45px;
+ }
+ .flex_forms{
+     display: flex;
+ }
+ .flex_forms .forms{
+     width: 50%;
+ }
+ .flex_forms .forms .form-control{
+     border-color: rgb(146, 42, 5);
+ }
+ form p{
+     
  }

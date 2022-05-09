@@ -10,13 +10,14 @@
     </div>
     <section class="loginsection" *ngIf="login">
         <form action="" autocomplete="off" method="post">
+            <div class="text-center text-danger">{{ error }}</div>
             <div class="form-group">
                 <!-- <label id="label" for="useremail">email adress</label> -->
-                <input type="text" name="useremail" id="useremail" class="shadow-none form-control" placeholder="Enter emailadress">
+                <input type="text" name="useremail" [(ngModel)]="useremail" id="useremail" class="shadow-none form-control" placeholder="Enter emailadress">
             </div>
             <div class="form-group">
                 <!-- <label id="label" for="password">password</label> -->
-                <input type="password" name="password" id="password" class="shadow-none form-control" placeholder="Enter password">
+                <input type="password" name="password" [(ngModel)]="password" id="password" class="shadow-none form-control" placeholder="Enter password">
             </div>
             <div class="form-group" id="links">
                 <a routerLink="/user/register">signup</a>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../services/register.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -10,7 +11,7 @@ export class SignupComponent implements OnInit {
   useremail:any = ''
   password:any = ''
   error:string =''
-  constructor(private RegisterService:RegisterService) { }
+  constructor(private RegisterService:RegisterService, private route:Router) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +30,12 @@ export class SignupComponent implements OnInit {
       this.RegisterService.register(details).subscribe((data) => {
         if(typeof(data) == "string"){
           this.error = data
+        }else{
+          this.username = ''
+          this.useremail = ''
+          this.password = ''
+
+          this.route.navigate(["/"])
         }
       })
     }

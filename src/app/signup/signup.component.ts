@@ -9,6 +9,7 @@ export class SignupComponent implements OnInit {
   username:any = ''
   useremail:any = ''
   password:any = ''
+  error:string =''
   constructor(private RegisterService:RegisterService) { }
 
   ngOnInit(): void {
@@ -26,7 +27,9 @@ export class SignupComponent implements OnInit {
       }
 
       this.RegisterService.register(details).subscribe((data) => {
-        console.log(data)
+        if(typeof(data) == "string"){
+          this.error = data
+        }
       })
     }
   }

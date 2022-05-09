@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resetpassword.component.css']
 })
 export class ResetpasswordComponent implements OnInit {
-
+  useremail:any = ''
+  password:any = ''
   constructor() { }
 
   ngOnInit(): void {

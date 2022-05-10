@@ -14,6 +14,7 @@ export class MessagesComponent implements OnInit {
   constructor(private cookie:CookieService, private UserService:UserService, private route:Router, private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    this.getuserdet()
   }
   
   getuserdet(){

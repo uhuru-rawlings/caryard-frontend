@@ -3,11 +3,12 @@
 </section>
 <section class="bodysection container">
    <div class="flex_profiles">
-       <div class="peronaldet">
-           <div class="userlogedin col-6"></div>
-           <div class="userrcd"><div class="t">{{ initials }}</div></div>
-           <div class="fullname">{{ userdet.username }}</div>
-           <div class="emailadress">{{ userdet.useremail }}</div>
+       <div class="peronaldet col-6">
+           <div class="userlogedin">
+                <div class="userrcd"><div class="texts">{{ initials }}</div></div>
+                <div class="fullname">Name: {{ userdet.username }}</div>
+                <div class="emailadress">Email: {{ userdet.useremail }}</div>
+            </div>
        </div>
        <div class="uploads col-6">
            <h4 class="text-center">Want to sell with us?</h4>

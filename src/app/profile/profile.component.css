@@ -9,4 +9,15 @@
     color:#C5C5C5;
     background-color:rgb(146, 42, 5);
     border-radius: 50%;
+    margin: auto;
+}
+.userrcd .texts{
+    padding-top: 30px;
+    font-size: 25px;
+}
+.peronaldet{
+    text-align: center;
+}
+.col-6 .userlogedin{
+    margin-top: 30px;
 }

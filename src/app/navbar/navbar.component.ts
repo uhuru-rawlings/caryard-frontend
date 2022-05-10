@@ -53,7 +53,9 @@ export class NavbarComponent implements OnInit {
         if(typeof(data) == "string"){
           this.error = data
         }else{
-          this.cookie.set("jwt",JSON.stringify(data.jwt))
+          const myDate: Date = new Date();
+          myDate.setHours( myDate.getHours() + 1 );
+          this.cookie.set("jwt",JSON.stringify(data.jwt),myDate)
           window.location.reload()
         }
         console.log(data)

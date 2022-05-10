@@ -65,7 +65,7 @@ export class NavbarComponent implements OnInit {
     let token = this.cookie.get("jwt")
     if (token){
       let tokenobj = {
-        "jwt":token
+        "jwt":JSON.parse(token)
       }
        this.user.decriptuser(tokenobj).subscribe((data) =>{
        console.log(data)

@@ -41,7 +41,7 @@ export class NavbarComponent implements OnInit {
 
   loginuser(){
     if(this.useremail ==='' || this.password === ''){
-      alert("please fill out all required fields")
+      this.toastr.error("please fill out all required fields")
       return
     }else{
       let details = {
@@ -73,7 +73,7 @@ export class NavbarComponent implements OnInit {
        
     })
   }else{
-     this.toastr.warning("To enjoy better service please login.")
+     this.toastr.info("To enjoy better service please login.")
   }
   }
 }

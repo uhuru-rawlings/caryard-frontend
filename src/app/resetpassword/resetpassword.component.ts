@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ResetService } from '../services/reset.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-resetpassword',
   templateUrl: './resetpassword.component.html',
@@ -10,13 +11,13 @@ export class ResetpasswordComponent implements OnInit {
   password:any = ''
   error:any =''
   success:any =''
-  constructor(private ResetService:ResetService) { }
+  constructor(private ResetService:ResetService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
   reset(){
     if(this.useremail === '' || this.password === ''){
-      alert('please fill all required fields')
+      this.toastr.error('please fill all required fields')
       return
     }else{
       let details = {

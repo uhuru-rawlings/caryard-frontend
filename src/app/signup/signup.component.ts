@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../services/register.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,14 +12,14 @@ export class SignupComponent implements OnInit {
   useremail:any = ''
   password:any = ''
   error:string =''
-  constructor(private RegisterService:RegisterService, private route:Router) { }
+  constructor(private RegisterService:RegisterService, private route:Router, private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
   
   adduser(){
     if(this.username === '' || this.useremail === '' || this.password === ''){
-      alert("please fill the required details")
+      this.toastr.error("please fill the required details")
       return
     }else{
       let details = {

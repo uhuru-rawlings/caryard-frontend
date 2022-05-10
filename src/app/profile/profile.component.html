@@ -1,11 +1,11 @@
 <section class="navsection">
     <app-navbar></app-navbar>
 </section>
-<section class="bodysection">
+<section class="bodysection container">
    <div class="flex_profiles">
        <div class="peronaldet">
            <div class="userlogedin col-6"></div>
-           <div class="userrcd">{{ initials }}</div>
+           <div class="userrcd"><div class="t">{{ initials }}</div></div>
            <div class="fullname">{{ userdet.username }}</div>
            <div class="emailadress">{{ userdet.useremail }}</div>
        </div>

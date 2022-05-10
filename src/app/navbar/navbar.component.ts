@@ -58,7 +58,7 @@ export class NavbarComponent implements OnInit {
           this.cookie.set("jwt",JSON.stringify(data.jwt),myDate)
           window.location.reload()
         }
-        console.log(data)
+       
       })
     }
     
@@ -70,7 +70,7 @@ export class NavbarComponent implements OnInit {
         "jwt":JSON.parse(token)
       }
        this.user.decriptuser(tokenobj).subscribe((data) =>{
-       console.log(data)
+       
     })
   }else{
      this.toastr.warning("To enjoy better service please login.")

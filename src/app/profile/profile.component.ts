@@ -27,7 +27,6 @@ export class ProfileComponent implements OnInit {
      this.user.decriptuser(tokens).subscribe((data) => {
        if(typeof(data) != "string"){
         this.userdet = data
-        console.log(this.userdet)
         this.userinit()
        }
      })
@@ -40,11 +39,10 @@ export class ProfileComponent implements OnInit {
       let texts = this.userdet.username
       let array = texts.split(" ")
       if(array.length > 1){
-          this.initials = array[0]+ "." + array[1]
+          this.initials = (array[0][0]+ "." + array[1][0]).toUpperCase()
       }else{
-        this.initials = array[0]
+        this.initials = (array[0][0]).toUpperCase()
       }
-      console.log(array)
     }else{
       this.route.navigate(['/'])
     }

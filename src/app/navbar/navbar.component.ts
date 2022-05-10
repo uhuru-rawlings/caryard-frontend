@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../services/login.service';
 import { UserService } from '../services/user.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class NavbarComponent implements OnInit {
   error:any = ''
   useremail:any = ''
   password:any = ''
-  constructor(private LoginService:LoginService, private cookie:CookieService, private user:UserService) { }
+  constructor(private toastr:ToastrService,private LoginService:LoginService, private cookie:CookieService, private user:UserService) { }
 
   ngOnInit(): void {
     this.toogleLogin()
@@ -67,7 +68,7 @@ export class NavbarComponent implements OnInit {
        console.log(data)
     })
   }else{
-
+     this.toastr.warning("To enjoy better service please login.")
   }
   }
 }

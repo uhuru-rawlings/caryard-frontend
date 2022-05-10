@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../services/login.service';
+import { UserService } from '../services/user.service';
 
 
 @Component({
@@ -14,10 +15,11 @@ export class NavbarComponent implements OnInit {
   error:any = ''
   useremail:any = ''
   password:any = ''
-  constructor(private LoginService:LoginService, private cookie:CookieService) { }
+  constructor(private LoginService:LoginService, private cookie:CookieService, private user:UserService) { }
 
   ngOnInit(): void {
     this.toogleLogin()
+    this.decript()
   }
 
   toogleForm(){
@@ -56,5 +58,16 @@ export class NavbarComponent implements OnInit {
         console.log(data)
       })
     }
+    
+  }
+  decript(){
+    let token = this.cookie.get("jwt")
+    if (token){
+       this.user.decriptuser(token).subscribe((data) =>{
+       console.log(data)
+    })
+  }else{
+
+  }
   }
 }
